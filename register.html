@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<h1 class="text-center font-weight-bold" style="font-size: 50px;"> Registration Form</h1>
+	<div class="container"><br>
+		
+		<div class="col-lg-6 m-auto d-block">
+			
+			<form action="" method="post" onsubmit="return validation()" class="bg-light">
+				
+				<div class="form-group">
+					<label for="fname" class="font-weight-bold"> First Name : </label>
+					<input type="text" name="fname" class="form-control" id="fname" autocomplete="off" onblur = "firstname();">
+					<span id="fname_error" class="text-danger font-weight-bold"></span>
+				</div>
+
+				<div class="form-group">
+					<label for="lame" class="font-weight-bold"> Last Name : </label>
+					<input type="text" name="lname" class="form-control" id="lname" autocomplete="off" onblur = "lastname();">
+					<span id="lname_error" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Date of Birth : </label>
+					<input type="Date" name="dob" class="form-control" id="dob" autocomplete="off">
+					<span id="dob_error" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Gender : </label><br>
+					<input type="radio" name="gender" value="male" checked> Male
+					<input type="radio" name="gender" value="female"> Female
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Mobile Number : </label>
+					<input type="text" name="mobile" class="form-control" id="mobile" autocomplete="off" onblur = "mobileno();">
+					<span id="mobile_error" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Email : </label>
+					<input type="text" name="email" class="form-control" id="email" autocomplete="off" onblur="emailid();">
+					<span id="email_error" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Password : </label>
+					<input type="password" name="pass" class="form-control" id="pass" autocomplete="off" onblur = "passwords();">
+					<span id="pass_error" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Confirm Password : </label>
+					<input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off" onblur = "cpasswords();">
+					<span id="conpass_error" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<input type="submit" id="submit" name="submit" value="Submit" class="btn btn-success" autocomplete="off">
+
+				<input type="reset" id="reset" name="reset" value="Reset" class="btn btn-danger" autocomplete="off">
+
+			</form><br>
+
+		</div>
+	</div>
+
+	<script src="scripts.js"></script>
+
+</body>
+
+</html>
